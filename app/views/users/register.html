@@ -1,0 +1,46 @@
+<section id="content" class="m-t-lg wrapper-md animated fadeInDown">
+    <a href="#" style="text-align: center;display:block">
+        <img src="images/logo/flat_logo.png" style="width: 300px;" alt=""/></a>
+    <div class="row m-n">
+        <div class="col-md-4 col-md-offset-4 m-t-lg">
+            <section class="panel">
+                <header class="panel-heading bg bg-info text-center">
+                    Sign up
+                </header>
+                <form class="panel-body form-horizontal" name="registerForm" role="form">
+                    <div>
+
+                        <div form-input label="Email">
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail"
+                                   ng-model="viewModel.email" required>
+                        </div>
+
+                    </div>
+                    <div class="line line-dashed"></div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Agree to the Terms and Conditions
+                        </label>
+                    </div>
+                    <div class="line line-dashed"></div>
+                      <a class="button btn btn-info" ng-disabled="registerForm.$invalid" ng-click="loginUser()"
+                       class="btn btn-info">Sign up</a>
+
+                    <div class="line line-dashed"></div>
+
+                    <a ui_sref="users_login" class="btn btn-white btn-block">Already have an account</a>
+                </form>
+            </section>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="text-center padder clearfix">
+        <p>
+            <small>Invirohub Energy Management System <br>&copy; 2013</small>
+        </p>
+    </div>
+</footer>

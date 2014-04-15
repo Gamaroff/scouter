@@ -1,0 +1,14 @@
+{
+    "_id"         : "1",
+    "name"        : "Caracal",
+    "requirements": [
+        {
+            "_id"        : "1",
+            "description": "Garden"
+        },
+        {
+            "_id"        : "2",
+            "description": "Wood Trails"
+        }
+    ]
+}

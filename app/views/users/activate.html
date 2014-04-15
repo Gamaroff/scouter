@@ -1,0 +1,62 @@
+<section id="content" class="m-t-lg wrapper-md animated fadeInUp" ng-init="init()">
+    <a href="#" style="text-align: center;display:block">
+        <img src="images/logo/flat_logo.png" style="width: 300px;" alt=""/></a>
+
+    <div class="row m-n">
+        <div class="col-md-4 col-md-offset-4 m-t-lg">
+            <section class="panel">
+                <header class="panel-heading bg bg-info text-center">
+                    Acccount Activation
+                </header>
+                <form class="panel-body form-horizontal" name="loginForm" role="form"
+                      ng-hide="viewModel.activation_message">
+                    <div>
+
+                        <div form-input label="Email">
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail"
+                                   ng-model="viewModel.email" required>
+                        </div>
+                        <div form-input label="Password">
+                            <input type="password" class="form-control" id="inputPassword" name="inputPassword"
+                                   ng-model="viewModel.password" required>
+                        </div>
+                        <div form-input label="Confirm Password">
+                            <input type="password" class="form-control" id="inputConfirmPassword"
+                                   name="inputConfirmPassword"
+                                   ng-model="viewModel.confirm_password" required>
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert alert-danger" ng-show="viewModel.message">{{ viewModel.message }}</div>
+
+
+                    <div class="line line-dashed"></div>
+                   
+
+                    <a class="button btn btn-info" ng-disabled="loginForm.$invalid || !viewModel.valid || viewModel.processing"
+                       ng-click="activate()"
+                       class="btn btn-info">{{ viewModel.status }}</a>
+
+
+                </form>
+                <form class="panel-body form-horizontal" name="activationForm" role="activationForm"
+                      ng-show="viewModel.activation_message">
+                    <div class="alert alert-success">{{ viewModel.activation_message }}</div>
+                    <a ui_sref="users_login" class="btn btn-white btn-block">Log in to Invirohub</a>
+                </form>
+
+
+            </section>
+        </div>
+    </div>
+</section>
+<!-- footer -->
+<footer id="footer">
+    <div class="text-center padder clearfix">
+        <p>
+            <small>Invirohub Energy Management System <br>&copy; 2013</small>
+        </p>
+    </div>
+</footer>
