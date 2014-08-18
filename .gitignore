@@ -34,3 +34,4 @@ node_modules
 .idea
 
 # mac
+.DS_Store
